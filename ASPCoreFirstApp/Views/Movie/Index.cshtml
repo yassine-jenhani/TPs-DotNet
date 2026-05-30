@@ -1,0 +1,38 @@
+﻿@using ASPCoreFirstApp.ViewModels
+@model RandomMovieViewModel
+
+@{
+    ViewData["Title"] = "Liste des Films et Clients";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 border-bottom pb-2">Gestion des Films</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 shadow-sm p-4 bg-white rounded">
+            <h4 class="text-primary">Film mis en avant : @Model.Movie.Name</h4>
+            
+            <table class="table table-hover mt-4 text-center border">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nom du Client</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in Model.Customers)
+                    {
+                        <tr>
+                            <td>@customer.Name</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@customer.Id" class="btn btn-outline-info btn-sm">
+                                    Voir Détails
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
