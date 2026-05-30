@@ -1,0 +1,30 @@
+﻿@model IEnumerable<manipulationDonneesEFCore.Models.Movie>
+
+<h1>Movies</h1>
+<a asp-action="Create">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date Ajout</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Name</td>
+                <td>@movie.DateAjoutMovie</td>
+                <td>
+                    @if (movie.ImageFile != null)
+                    {
+                        <img src="~/images/@movie.ImageFile"
+                             width="100" height="100" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

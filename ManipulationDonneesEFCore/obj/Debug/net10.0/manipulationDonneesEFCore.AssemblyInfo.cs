@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("manipulationDonneesEFCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0b02efb7a46e8cbd2c7f7bbee45c3f4ab369821")]
 [assembly: System.Reflection.AssemblyProductAttribute("manipulationDonneesEFCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("manipulationDonneesEFCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

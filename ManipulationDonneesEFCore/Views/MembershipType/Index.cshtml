@@ -1,0 +1,29 @@
+﻿@model IEnumerable<manipulationDonneesEFCore.Models.MembershipType>
+
+<h1>Index</h1>
+<a asp-action="Create">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SignUpFee</th>
+            <th>DurationInMonth</th>
+            <th>DiscountRate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var membership in Model)
+        {
+            <tr>
+                <td>@membership.SignUpFee</td>
+                <td>@membership.DurationInMonth</td>
+                <td>@membership.DiscountRate</td>
+                <td>
+                    <a asp-action="Delete"
+                       asp-route-id="@membership.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
